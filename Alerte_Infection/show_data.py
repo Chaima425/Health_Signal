@@ -1,3 +1,4 @@
+#show_data.py
 import sqlite3
 conn = sqlite3.connect("alerte_infection.db")
 cur = conn.cursor()

@@ -1,3 +1,4 @@
+#add_infection.py
 import sqlite3
 
 # Connexion à la base
