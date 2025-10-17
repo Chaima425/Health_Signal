@@ -10,6 +10,7 @@ cur.executescript("""
 DROP TABLE IF EXISTS lieux;
 DROP TABLE IF EXISTS cas;
 DROP TABLE IF EXISTS infection;
+DROP TABLE IF EXISTS notifications;
 """)
 
 # Table infection
@@ -41,6 +42,17 @@ CREATE TABLE lieux (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     id_cas INTEGER NOT NULL,
     gps TEXT NOT NULL,
+    FOREIGN KEY (id_cas) REFERENCES cas(id)
+);
+""")
+#Tab notifications
+cur.execute("""
+CREATE TABLE notifications (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_cas INTEGER NOT NULL,
+    message TEXT NOT NULL,
+    date_notification TEXT DEFAULT CURRENT_TIMESTAMP,
+    statut TEXT DEFAULT 'non lue',
     FOREIGN KEY (id_cas) REFERENCES cas(id)
 );
 """)

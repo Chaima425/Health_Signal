@@ -12,4 +12,4 @@ VALUES (?, ?, ?, ?, ?)
 
 conn.commit()
 conn.close()
-print("✅ Infection test ajoutée avec succès !")
+print("Infection test ajoutée avec succès !")
