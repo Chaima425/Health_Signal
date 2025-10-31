@@ -11,9 +11,6 @@ COPY . /app
 RUN python -m pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Variable d'environnement PORT (Azure App Service fournit cette valeur)
-ENV PORT=8501
-
 # Commande de démarrage adaptée à Azure
 CMD streamlit run frontend/app_streamlit.py --server.port=$PORT --server.address=0.0.0.0
 
