@@ -5,29 +5,5 @@ services:
     image: chaima425/alerte-infection-app:latest
     container_name: alerte_infection_app
     command: streamlit run frontend/app_streamlit.py --server.port=$PORT --server.address=0.0.0.0
-    environment:
-      - PORT=8501
-
-
-
-# version: "3.9"
-
-# services:
-#   streamlit_app:
-#     build: .
-#     container_name: alerte_infection_app
-#     command: streamlit run frontend/app_streamlit.py --server.port=8501 --server.address=0.0.0.0
-
-
-
-# version: "3.9"
-
-# services:
-#   streamlit_app:
-#     build: .
-#     container_name: alerte_infection_app
-#     ports:
-#       - "8501:8501"
-#     volumes:
-#       - .:/app
-#     command: streamlit run frontend/app_streamlit.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
