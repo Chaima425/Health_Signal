@@ -1,0 +1,4 @@
+.venv/
+Alerte_Infection/__pycache__/
+__pycache__/
+db.sqlite3
