@@ -1,7 +1,11 @@
 import streamlit as st
 import requests
+import os
 
-API_BASE = "http://127.0.0.1:8000"  # Ton API FastAPI
+API_BASE = os.environ.get("API_BASE", "http://127.0.0.1:8000")
+# API_BASE = "http://127.0.0.1:8000"  # MON API FastAPI locale
+st.write("API_BASE =", API_BASE)
+
 
 st.title("Dashboard Alerte Infection")
 
